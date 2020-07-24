@@ -1,6 +1,7 @@
 //! == Import : npm ==
 import React from 'react';
 import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom';
 
 //! == Import : local ==
 import Nav from '../Nav';
@@ -12,7 +13,12 @@ import './styles.scss';
 const Header = () => (
     <header className="header">
         <div className="header__brand">
-            <img className="header__image" src={logo} alt="logo"/>
+            <NavLink
+                to="/"
+                exact
+            >
+                <img className="header__image" src={logo} alt="logo"/>
+            </NavLink>
         </div>
         <div className="header__infos">
             <div className="header__none"></div>
