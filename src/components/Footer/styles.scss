@@ -1,0 +1,97 @@
+@use '../../styles/vars';
+
+.footer {
+    padding: 2rem;
+    background: vars.$color-primary;
+    box-shadow: 0 0 30px 10px vars.$color-primary;
+    &__container {
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+    }
+    &__form {
+        padding: 1rem;
+        width: 50%;
+        &--name {
+            width: 45%;
+        }
+        &--surname {
+            width: 45%;
+        }
+        &--mail {
+            width: 45%;
+        }
+        &--phone {
+            width: 45%;
+        }
+        &--area {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        &--button {
+            width: 50%;
+            background: transparent;
+            padding: .5rem 0;
+            color: #FFF;
+            border-radius: .3rem;
+            border: 1px solid #FFF;
+            &:hover {
+                background: #FFF;
+                color: vars.$color-primary;
+                border: 1px solid transparent;
+
+            }
+        }
+    }
+    &__title {
+        color: #FFF;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    &__mail {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    &__submit {
+        text-align: center;
+    }
+    &__aside {
+        width: 50%;
+        padding: 0 2rem;
+        color: #FFF;
+        font-size: 1.2rem;;
+    }
+    &__horaires {
+        margin: 1rem;
+    }
+    &__phone {
+        margin: 1rem;
+    }
+    &__adresse {
+        margin: 1rem;
+    }
+    &__infos {
+        padding: .2rem 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        &__container {
+            display: block;
+        }
+        &__form {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        &__aside {
+            width: 100%;
+        }
+    }
+}

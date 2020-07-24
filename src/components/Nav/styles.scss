@@ -1,0 +1,73 @@
+@use '../../styles/vars';
+
+.navbar {
+    height: 70%;
+    background: vars.$color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &__toggle {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__list {
+        display: flex;
+        margin-left: 3rem;
+    }
+    &__link {
+        color: #FFF;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid transparent;
+        &--selected {
+            color: #FFF;
+            margin: 0 1rem;
+            font-size: 1.3rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid #FFF;
+        }
+        &:hover {
+            border-bottom: 2px solid #FFF;
+            cursor: pointer;
+        }
+    }
+    &__socialnetworks {
+        margin-right: 2rem;
+        display: flex;
+    }
+    &__socialnetwork {
+        height: 2.13rem;
+        border: 1px solid transparent;
+        margin-left: 1rem;
+        border-radius: 50%;
+        &:hover {
+            border: 1px solid #F0F;
+            background: #F0F;
+        }
+    }
+    &__hamburger {
+        display: none;
+    }
+}
+
+.socialnetwork {
+    height: 2rem;
+    fill: #FFF;
+    :hover {
+        fill: vars.$color-primary;
+    }
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        &__hamburger {
+            display: block;
+        }
+        &__toggle {
+            display: none;
+            }
+    }
+}

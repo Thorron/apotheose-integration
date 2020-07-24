@@ -1,0 +1,45 @@
+@use '../../styles/vars';
+
+.header {
+    height: 15vh;
+    position: relative;
+    box-shadow: 0 0 30px 10px vars.$color-primary;
+    &__image {
+        height: 6rem;
+        position: absolute;
+        top: calc(50% - 3rem);
+        left: 5rem;
+    }
+    &__infos {
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: inset 0 0 5px 1px vars.$color-primary;
+    }
+    &__status {
+        margin-left: 3rem;
+        font-weight: bold;
+        font-size: 1.2rem
+    }
+    &__link {
+        margin-right: 3rem;
+        &--contact {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        &__image {
+            left: 1rem;
+        }
+        &__status {
+            margin-left: 5rem;
+        }
+        &__link {
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,170 @@
+@use '../../styles/vars';
+
+.menu {
+    font-family: 'Amatic SC', cursive;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+    }
+    &__card {
+        width: 100%;
+        &--flex {
+            width: 48%;
+            font-family: 'Amatic SC', cursive;
+        }
+        &--title {
+            background: vars.$color-primary;
+            color: #FFF;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: relative;
+        }
+        &--contents {
+            width: 100%;
+            padding: 1rem;
+            border-left: 1px dashed vars.$color-primary;
+            border-right: 1px dashed vars.$color-primary;
+            border-bottom: 1px dashed vars.$color-primary;
+            display: flex;
+            font-family: 'Lato', sans-serif;
+            height: 100%;
+        }
+        &--content {
+            width:50%;
+            padding: .5rem;
+        }
+    }
+    &__croque {
+        display: flex;
+        justify-content: space-between;
+        &--title {
+            font-weight: bold;
+        }
+        &--price {
+            font-weight: bold;
+        }
+        &--description {
+            font-size: .7rem;
+            margin-bottom: .7rem;
+        }
+    }
+    &__container {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        height: 6rem;
+        margin-bottom: 6rem;
+        &--row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        &--column {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--vin {
+            padding: 0 12rem;
+        }
+    }
+    &__accompagnement {
+        font-family: 'Amatic SC', cursive;
+        margin: 0 1rem;
+        &--image {
+            max-width: 100%;
+            margin-bottom: .3rem;
+        }
+        &--text {
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &__sucre {
+        font-family: 'Amatic SC', cursive;
+        display: flex;
+        align-items: center;
+        &--image {
+            max-width: 100%;
+            height: 2rem;
+            margin-bottom: .2rem;
+        }
+        &--text {
+            font-weight: bold;
+            text-align: center;
+            margin-left: 1rem;
+        }
+        &--description {
+            font-family: 'Lato', sans-serif;
+            font-size: .7rem;
+            margin-left: 1rem;
+        }
+    }
+    &__boisson {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+        &--container {
+            border-left: 1px dashed vars.$color-primary;
+            border-right: 1px dashed vars.$color-primary;
+            border-bottom: 1px dashed vars.$color-primary;
+            font-family: 'Lato', sans-serif;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.no-border {
+    border: none;
+}
+
+.st0 {
+    fill: vars.$color-primary;
+}
+
+.st1 {
+    fill: #FFF;
+}
+
+#croc {
+    // enable-background: new 0 0 204 117.5;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+@media (max-width: 650px) {
+    .menu {
+        padding: .3rem;
+        &__card {
+            &--contents {
+                display: block;
+            }
+            &--content {
+                width: 100%;
+            }
+            &--flex {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+        &__container {
+            display: block;
+            margin-bottom: 18rem;
+            &--vin {
+                    padding: 0 2rem;
+            }
+        }
+    }
+}

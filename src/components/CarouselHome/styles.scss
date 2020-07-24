@@ -1,0 +1,21 @@
+.carousel {
+    height : 85vh;
+    &__container {
+        height: 100%;
+    }
+    &__image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .carousel {
+        height: 30vh;
+        &__container {
+            height: 100%;
+        }
+        &__image {
+            max-width: 100%;
+        }
+    }
+}

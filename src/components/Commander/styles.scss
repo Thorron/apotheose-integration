@@ -1,0 +1,97 @@
+@use '../../styles/vars';
+
+.commander {
+    &__emporter {
+        height: 42.5vh;
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem;
+    &--text {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    &--links {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    &--link {
+        border: 5px solid vars.$color-primary;
+        border-radius: .3rem;
+        max-width: 100%;
+        height: 7rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    }
+    &__surplace {
+        height: 42.5vh;
+        background: vars.$color-primary;
+        &--container {
+            height: 100%;
+            max-width: 700px;
+            margin:  0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        &--title {
+            color: #FFF;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1.3;
+        }
+        &--button {
+            background: transparent;
+            font-size: 1.3rem;
+            padding: .5rem 1rem;
+            color: #FFF;
+            border-radius: .3rem;
+            border: 1px solid #FFF;
+            &:hover {
+                background: #FFF;
+                color: vars.$color-primary;
+                border: 1px solid transparent;
+            }
+        }
+    }
+    &__commande {
+        height: 500px;
+        border: 1px dashed vars.$color-primary;
+        max-width: 700px;
+        margin: 2rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+    }
+}
+
+#bigTriangleShadow {
+    fill: vars.$color-primary;
+}
+
+@media (max-width: 650px) {
+    .commander {
+        &__emporter {
+            &--links {
+                display: block;
+                text-align: center;
+            }
+            &--link {
+                height: 6rem;
+                margin-top: 1rem;
+            } 
+        }
+        &__surplace {
+            padding: 1rem;
+            &--button {
+            }
+        }
+    }
+}
