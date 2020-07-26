@@ -1,0 +1,49 @@
+@use '../../styles/vars';
+@import '../../styles/vars';
+
+.nav {
+    height: 70%;
+    background: vars.$color-primary;
+    @include m767() {
+        display: none;
+    }
+    &__hamburger {
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &--open {
+            height: 85vh;
+            width: 100vw;
+            background: vars.$color-primary;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            z-index: 2000;
+        }
+        &--close {
+            display: none;
+        }
+    }
+}
+
+.navbar__link {
+    color: #FFF;
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid transparent;
+    &--selected {
+        color: #FFF;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+        padding-bottom: .5rem;
+        border-bottom: 2px solid #FFF;
+    }
+    &:hover {
+        border-bottom: 2px solid #FFF;
+        cursor: pointer;
+    }
+}

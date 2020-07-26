@@ -2,15 +2,17 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 //! == Import : local ==
 import Nav from '../Nav';
+import Burger from '../Burger';
 
 import logo from '../../images/logo-brand.png';
 import './styles.scss';
 
 //! == Composant ==
-const Header = () => (
+const Header = ({ isActive, setIsActive }) => (
     <header className="header">
         <div className="header__brand">
             <NavLink
@@ -40,8 +42,17 @@ const Header = () => (
             </div>
         </div>
         <Nav />
+        <Burger
+            isActive={isActive}
+            setIsActive={setIsActive}
+        />
     </header>
 );
+
+Header.propTypes = {
+    isActive: PropTypes.bool.isRequired,
+    setIsActive: PropTypes.func.isRequired,
+};
 
 //! == Export ==
 export default Header;

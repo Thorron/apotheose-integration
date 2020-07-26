@@ -1,7 +1,6 @@
 //! == Import : npm ==
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { HamburgerElastic } from 'react-animated-burgers';
 
 //! == Import : local ==
 import facebook from '../../images/facebook.svg';
@@ -59,14 +58,6 @@ const Nav = () => (
                     <img className="socialnetwork" src={tripadvisor} alt="tripadvisor"/>
                 </a>
             </div>
-        </div>
-        <div className="navbar__hamburger">
-            <HamburgerElastic
-                isActive={false}
-                toggleButton={'handleClick'}
-                buttonColor="transparent"
-                barColor="white"
-            />
         </div>
     </nav>
 );
