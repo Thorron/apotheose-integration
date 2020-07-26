@@ -5,6 +5,9 @@ import { NavLink } from 'react-router-dom';
 import { HamburgerElastic } from 'react-animated-burgers';
 
 //! == Import : local ==
+import facebook from '../../images/facebook.svg';
+import instagram from '../../images/instagram-sketched.svg';
+import tripadvisor from '../../images/tripadvisor.svg';
 import './styles.scss';
 
 //! == Composant ==
@@ -65,6 +68,17 @@ const Burger = ({ isActive, setIsActive }) => {
                 >
                     Nous trouver
                 </NavLink>
+                <div className="nav__socialnetworks">
+                    <a className="nav__socialnetwork" target="_blank" href="https://fr-fr.facebook.com/Messieurscroquent/" rel="noopener noreferrer">
+                        <img className="socialnetwork" src={facebook} alt="facebook"/>
+                    </a>
+                    <a className="nav__socialnetwork" target="_blank" href="https://www.instagram.com/messieurscroquent/" rel="noopener noreferrer">
+                        <img className="socialnetwork" src={instagram} alt="instagram"/>
+                    </a>
+                    <a className="nav__socialnetwork" target="_blank" href="https://www.tripadvisor.fr/Restaurant_Review-g187079-d12474378-Reviews-Messieurs_Croquent-Bordeaux_Gironde_Nouvelle_Aquitaine.html" rel="noopener noreferrer">
+                        <img className="socialnetwork" src={tripadvisor} alt="tripadvisor"/>
+                    </a>
+                </div>
             </div>
         </div>
     );
